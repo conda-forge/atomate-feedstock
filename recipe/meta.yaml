@@ -35,6 +35,8 @@ requirements:
 test:
   imports:
     - atomate
+  commands:
+    - pip check
 
 about:
   home: https://hackingmaterials.github.io/atomate
