@@ -1,5 +1,5 @@
 {% set name = "atomate" %}
-{% set version = "0.9.4" %}
+{% set version = "0.9.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4dea844af3a00ecd222fb20822f4574a672d4108914f49d8bd3806947044453f
+  sha256: f25915e8e0197529e1010f700f6cf9594baa5c493a4cafa58276cf746bd64b6c
 
 build:
   noarch: python
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -44,7 +44,7 @@ about:
   license: BSD-3-Clause-LBNL
   license_family: BSD
   license_file: LICENSE
-  summary: 'atomate is a powerful software for computational materials science and contains pre-built workflows.'
+  summary: atomate is a powerful software for computational materials science and contains pre-built workflows.
 
   description: |
     atomate is a software for computational materials science that 
