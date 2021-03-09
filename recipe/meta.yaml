@@ -30,6 +30,7 @@ requirements:
     - pymatgen-diffusion >=2018.1.4
     - pydash >=4.1.0
     - paramiko >=2.4.2
+    - pathlib2
     - matplotlib-base >=1.5.2
     - phonopy >=1.10.8
 
