@@ -21,12 +21,13 @@ requirements:
   run:
     - python >=3.7
     - pip
-    - fireworks >=1.4.0
-    - pymatgen >=2018.6.11
     - custodian >=2018.6.11
+    - fireworks >=1.4.0
+    - maggma
     - monty >=1.0.2
     - tqdm >=4.7.4
     - six
+    - pymatgen >=2018.6.11
     - pymatgen-diffusion >=2018.1.4
     - pydash >=4.1.0
     - paramiko >=2.4.2
