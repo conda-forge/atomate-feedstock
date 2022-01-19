@@ -25,15 +25,17 @@ requirements:
     - fireworks >=1.4.0
     - maggma
     - monty >=1.0.2
+    - numpy <1.22.0,>=1.20.3
     - tqdm >=4.7.4
     - six
-    - pymatgen >=2018.6.11
+    - pymatgen <=2022.0.10,>=2020.9.14
     - pymatgen-analysis-diffusion
     - pydash >=4.1.0
     - paramiko >=2.4.2
     - pathlib2
     - matplotlib-base >=1.5.2
     - phonopy >=1.10.8
+    - pymongo <4.0.0
 
 test:
   imports:
