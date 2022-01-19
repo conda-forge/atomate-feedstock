@@ -1,5 +1,5 @@
 {% set name = "atomate" %}
-{% set version = "1.0.1" %}
+{% set version = "1.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9e773844b051d52c84d34fba803c47b8ee64e952321d99c9cdb3064be0e088eb
+  sha256: de71dfb2cb4b11bdf48245475e2f671df674bdffee40c086ed3316682bf69e36
 
 build:
   noarch: python
@@ -23,17 +23,19 @@ requirements:
     - pip
     - custodian >=2018.6.11
     - fireworks >=1.4.0
-    - maggma
+    - maggma <0.34  # as 0.34 already requires pymongo >=4.0.0
     - monty >=1.0.2
+    - numpy <1.22.0,>=1.20.3
     - tqdm >=4.7.4
     - six
-    - pymatgen >=2018.6.11
+    - pymatgen <=2022.0.10,>=2020.9.14
     - pymatgen-analysis-diffusion
     - pydash >=4.1.0
     - paramiko >=2.4.2
     - pathlib2
     - matplotlib-base >=1.5.2
     - phonopy >=1.10.8
+    - pymongo <4.0.0
 
 test:
   imports:
