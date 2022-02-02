@@ -23,7 +23,7 @@ requirements:
     - pip
     - custodian >=2018.6.11
     - fireworks >=1.4.0
-    - maggma <0.34  # as 0.34 already requires pymongo >=4.0.0
+    - maggma >=0.39.0
     - monty >=1.0.2
     - numpy <1.22.0,>=1.20.3
     - tqdm >=4.7.4
