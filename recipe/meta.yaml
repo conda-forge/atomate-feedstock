@@ -30,7 +30,7 @@ requirements:
     - six
     - pymatgen >=2023.7.20
     - pymatgen-analysis-diffusion
-    - pymatgen-analysis-defect
+    - pymatgen-analysis-defects
     - pydash >=4.1.0
     - paramiko >=2.4.2
     - pathlib2
