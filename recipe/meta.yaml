@@ -1,5 +1,5 @@
 {% set name = "atomate" %}
-{% set version = "1.0.3" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1d242ed41ffec042b8730e2ef133da77174a8afa621b88e7091c19a714afdc9f
+  sha256: 6557b8bc9963dd2f3001f9c0dc79468004fdff3a008823bb349a3ad526ea59b0
 
 build:
   noarch: python
@@ -28,8 +28,9 @@ requirements:
     - numpy <1.22.0,>=1.20.3
     - tqdm >=4.7.4
     - six
-    - pymatgen <=2022.0.10,>=2020.9.14
+    - pymatgen >=2023.7.20
     - pymatgen-analysis-diffusion
+    - pymatgen-analysis-defects
     - pydash >=4.1.0
     - paramiko >=2.4.2
     - pathlib2
