@@ -3,20 +3,11 @@ About atomate-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/atomate-feedstock/blob/main/LICENSE.txt)
 
-Home: https://hackingmaterials.github.io/atomate
+Home: https://github.com/hackingmaterials/atomate
 
-Package license: BSD-3-Clause-LBNL
+Package license: BSD-3-Clause
 
-Summary: atomate is a powerful software for computational materials science and contains pre-built workflows.
-
-Development: https://github.com/hackingmaterials/atomate
-
-Documentation: https://hackingmaterials.github.io/atomate
-
-atomate is a software for computational materials science that
-contains pre-built workflows to compute and analyze the properties
-of materials.
-
+Summary: atomate has implementations of FireWorks workflows for Materials Science
 
 Current build status
 ====================
