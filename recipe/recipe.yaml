@@ -9,7 +9,7 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.io/packages/source/${{ name[0] }}/${{ name }}/atomate-${{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/atomate-${{ version }}.tar.gz
   sha256: 6557b8bc9963dd2f3001f9c0dc79468004fdff3a008823bb349a3ad526ea59b0
 
 build:
@@ -19,10 +19,11 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python ${{ python_min }}.*
     - pip
+    - setuptools
   run:
-    - python >=3.7
+    - python >=${{ python_min }}
     - custodian >=2023.7.22
     - fireworks >=2.0.3
     - maggma >=0.51.25
