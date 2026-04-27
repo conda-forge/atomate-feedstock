@@ -1,25 +1,29 @@
-{% set name = "atomate" %}
-{% set version = "1.1.0" %}
+schema_version: 1
+
+context:
+  name: atomate
+  version: "1.1.0"
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/atomate-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/atomate-${{ version }}.tar.gz
   sha256: 6557b8bc9963dd2f3001f9c0dc79468004fdff3a008823bb349a3ad526ea59b0
 
 build:
+  number: 2
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python >=3.7
+    - python ${{ python_min }}.*
     - pip
+    - setuptools
   run:
-    - python >=3.7
+    - python >=${{ python_min }}
     - custodian >=2023.7.22
     - fireworks >=2.0.3
     - maggma >=0.51.25
@@ -38,19 +42,18 @@ requirements:
     - scipy
     - tqdm >=4.65.0
 
-test:
-  imports:
-    - atomate
-  commands:
-    - pip check
-  requires:
-    - pip
+tests:
+  - python:
+      imports:
+        - atomate
+      pip_check: true
 
+      python_version: ${{ python_min }}.*
 about:
-  home: https://github.com/hackingmaterials/atomate
   summary: atomate has implementations of FireWorks workflows for Materials Science
   license: BSD-3-Clause
   license_file: LICENSE
+  homepage: https://github.com/hackingmaterials/atomate
 
 extra:
   recipe-maintainers:
